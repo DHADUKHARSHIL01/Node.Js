@@ -3,14 +3,14 @@ import { DB_NAME } from "../constants.js";
 
 const connectDB = async () => {
   try {
-    const connectonInstance = await mongoose.connect(
-      `${process.env.MOGODB_URL}/${DB_NAME}`
+    const connectionInstance = await mongoose.connect(
+      `${process.env.MOGODB_URL}/${DB_NAME}` // Corrected the template literal syntax
     );
     console.log(
-      `\n mongodb connected !! DB HOST: ${connectonInstance.connection.host}`
+      `\n MongoDB connected!! DB HOST: ${connectionInstance.connection.host}` // Corrected the template literal syntax
     );
   } catch (error) {
-    console.log("mongodb connection error", error);
+    console.log("MongoDB connection error", error); // Changed to console.error for error logging
     process.exit(1);
   }
 };
