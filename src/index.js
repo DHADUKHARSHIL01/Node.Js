@@ -12,7 +12,6 @@ connectDB()
     app.listen(process.env.PORT || 6001, () => {
       console.log(`Server is running at: ${process.env.PORT}`);
       console.log("Hello");
-      console.log("server in not working", err);
     });
   })
   .catch((err) => {
