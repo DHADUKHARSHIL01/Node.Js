@@ -11,9 +11,9 @@ http
   .createServer((req, res) => {
     res.writeHead(200, { "content-Type": "'text/html" });
     res.write("hello");
-    res.end();
+    return res.end();
   })
-  .listen(process.env.PORT);
+  .listen(6000);
 
 connectDB()
   .then(() => {
