@@ -44,6 +44,26 @@ app.delete("/delete/:_id", async (req, res) => {
   let data = await Products.deleteOne(req.params);
   res.send(data);
 });
+
+app.put("/update/:_id", async (req, res) => {
+  console.log(req.params);
+  let data = await Products.updateMany(req.params, {
+    $set: req.body,
+  });
+  res.send(data);
+});
+
+app.get("/search/:key", async (req, res) => {
+  const data = await product.find({
+    $or: [
+      { name: { $regex: req.params.key } },
+      { brand: { $regex: req.params.key } },
+    ],
+  });
+  console.log(req.params.key);
+  res.send(data);
+});
+
 app.listen(5001, () => {
   console.log(`Server is running on port 5001`);
 });
