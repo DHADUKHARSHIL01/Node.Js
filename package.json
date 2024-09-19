@@ -6,7 +6,7 @@
   "main": "index1.js",
   "scripts": {
     "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
-    "start": "nodemon src/index1.js"
+    "start": "nodemon src/index2.js"
   },
   "author": "Harshil",
   "license": "ISC",
