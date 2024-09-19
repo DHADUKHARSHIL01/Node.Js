@@ -17,7 +17,7 @@ const app = express();
 
 app.use(express.json());
 
-const mongoURI = "mongodb://localhost:27017/mydb";
+const mongoURI = "mongodb://localhost:27017/newdb";
 
 mongoose
   .connect(mongoURI)
